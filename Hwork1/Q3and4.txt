@@ -1,0 +1,23 @@
+3.
+    a. CADDR
+    b. CAADADR
+    c. CAADADAAR
+
+4.
+    a. 
+        (cons 'd ())
+        (cons 'x (d))
+        (cons 'b '(x d))
+        (cons 'a '(b x d))
+    b.
+        (cons 'd ())
+        (cons 'x (d))
+        (cons 'b '((x d)))
+        (cons 'a '((b(x d))))
+    c.
+        (cons 'd ())
+        (cons '(x) '(d))
+        (cons 'b '((x)d))
+        (cons 'a '((b(x)d)))
+        (cons '(a(b(x)d)) NIL)
+        (cons '((a(b(x)d))) NIL)
