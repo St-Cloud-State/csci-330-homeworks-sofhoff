@@ -1,0 +1,15 @@
+(defun insert (element sortedList) ;insert an element into correct position in sorted list."
+  (cond
+    ((null sortedList) (list element))  ;return element if empty
+    ((< element (car sortedList)) (cons element sortedList))  ;insert at beginning if smaller than first element
+    (t (cons (car sortedList) (insert element (cdr sortedList))))))  ;else recurse insert to the rest of list
+
+(defun insertionSort (lst) 
+  (cond
+    ((null lst) nil)  ;return nil if list is empty
+    (t (insert (car lst) (insertionSort (cdr lst))))))  ;insert first element into sorted rest of list
+
+;Tests used
+(insertionSort '(6 2 9 1 7 1))
+(insertionSort '(6 2 9 1 7 14 1))
+(insertionSort '())

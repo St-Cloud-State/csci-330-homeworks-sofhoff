@@ -1,0 +1,30 @@
+(defun merge (list1 list2) ;;Merge two sorted lists into one sorted list
+  (cond
+    ((null list1) list2)  ; If list1 is empty, return list2
+    ((null list2) list1)  ; If list2 is empty, return list1
+    ((< (car list1) (car list2))  ; If the first element of list1 is smaller than the first element of list2,
+     (cons (car list1) (merge (cdr list1) list2)))  ; take the first element of list1 and recursively merge the rest of list1 with list2
+    (t (cons (car list2) (merge list1 (cdr list2))))))  ; Otherwise, take the first element of list2 and merge list1 with the rest of list2
+
+(defun partition (lst) ;;Partition the list into sorted pairs
+  (if (null lst) nil  ; If the list is empty, return nil
+      (if (null (cdr lst)) (list lst)  ; If there is only one element left, return it as a single element list
+          (cons (sort (list (car lst) (cadr lst)) #'<)  ; Sort the first two elements and create a sorted pair
+                (partition (cddr lst))))))  ; Recursively partition the rest of the list, skipping the first two elements
+
+(defun merge-pairs (pairs) ;;Merge adjacent pairs in the list of pairs
+  (cond
+    ((null pairs) nil)  ; If there are no pairs left, return nil
+    ((null (cdr pairs)) pairs)  ; If there’s only one pair left, return it as is
+    (t (let ((merged (merge (car pairs) (cadr pairs))))  ; Merge the first two pairs
+         (cons merged (merge-pairs (cddr pairs)))))))  ; Recursively merge the rest of the pairs
+
+(defun BUmergesort (lst) ;;BUmergesort the list, returning only the sorted list
+  (let ((pairs (partition lst)))  ; Partition the list into sorted pairs
+    (let ((merged-pairs (merge-pairs pairs)))  ; Merge the adjacent pairs
+      (if (every #'listp merged-pairs)  ; If all elements are in single lists, return the merged result
+          (car merged-pairs)  ; Return the sorted list
+          (BUmergesort merged-pairs)))))  ; Otherwise, recursively call BUmergesort on the merged pairs
+
+;; Test the BUmergesort function
+(BUmergesort '(1 7 2 1 8 6 5 3 7 9 4))
