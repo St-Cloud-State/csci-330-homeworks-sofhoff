@@ -1,0 +1,32 @@
+(defun merge (list1 list2) ;merge two sorted lists into one sorted list
+  (cond
+    ((null list1) list2) ;if list1 is empty return list2
+    ((null list2) list1) ;if list2 is empty return list1
+    ((< (car list1) (car list2)) ;if first element of list1 is smaller than first element of list2
+     (cons (car list1) (merge (cdr list1) list2))) ;take first element of list1 and recursively merge rest of list1 with list2
+    (t (cons (car list2) (merge list1 (cdr list2)))))) ;else take first element of list2 and merge list1 with rest of list2
+
+(defun partition (lst)
+  (if (null lst) nil  ;return nil if empty
+      (if (null (cdr lst)) (list lst)  ;if there is one element left return it as single element list
+          (cons (sort (list (car lst) (cadr lst)) #'<)  ;sort first two elements and create a sorted pair
+                (partition (cddr lst))))))  ;recursively partition rest of list skipping first two elements
+
+(defun merge-pairs (pairs) ;merge adjacent pairs in the list of pairs
+  (cond
+    ((null pairs) nil)  ;if no pairs left return nil
+    ((null (cdr pairs)) pairs)  ;if one pair left return it as is
+    (t (let ((merged (merge (car pairs) (cadr pairs))))  ;merge first two pairs
+         (cons merged (merge-pairs (cddr pairs)))))))  ;recursively merge rest of pairs
+
+(defun BUmergesort (lst) ;returns sorted list
+  (let ((pairs (partition lst)))  ;partition list into sorted pairs
+    (let ((merged-pairs (merge-pairs pairs)))  ;merge adjacent pairs
+      (if (every #'listp merged-pairs)  ;if all elements are in single lists, return the merged result
+          (car merged-pairs)  ;return the sorted list
+          (BUmergesort merged-pairs)))))  ;else recurse on merged pairs
+
+;Tests used
+(BUmergesort '(9 3 7 2))
+(BUmergesort '(9 2 7))
+(BUmergesort '())
