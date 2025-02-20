@@ -1,0 +1,22 @@
+Script started on 2025-02-19 23:02:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="121" LINES="10"]
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ g[Kexit[2Plscd ~/Hwork3/quicksortls[Kexit[Kexit[2Plscd ~/Hwork3/quicksortexit[Ksbclexitsbclexitcd ~/Hwork3/quicksortls[Kexit[Kg++ quicksort.cpp -o test
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ ./test
+Enter number of elements in the array: 6
+Enter the elements of the array: 62  29  91 71^[[3~          1 7 1
+original: 6 2 9 1 7 1 
+sorted: 1 1 2 6 7 9 
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ ./testg++ quicksort.cpp -o test
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ g++ quicksort.cpp -o test./test[K
+Enter number of elements in the array: 7
+Enter the elements of the array: 6 2 9 1 7 14 1
+original: 6 2 9 1 7 14 1 
+sorted: 1 1 2 6 7 9 14 
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ ./testg++ quicksort.cpp -o test
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ g++ quicksort.cpp -o test./test[K
+Enter number of elements in the array: 0
+Enter the elements of the array: original: 
+sorted: 
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ exit
+exit
+
+Script done on 2025-02-19 23:04:17+00:00 [COMMAND_EXIT_CODE="0"]
