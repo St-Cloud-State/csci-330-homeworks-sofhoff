@@ -1,0 +1,420 @@
+Script started on 2025-03-18 19:27:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="158" LINES="12"]
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "Hwork5/RecursiveDescentParser")
+
+; file: /workspaces/csci-330-homeworks-sofhoff/Hwork5/RecursiveDescentParser
+; in: DEFUN IFN
+;     (EFN (CDR STR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: EFN
+
+;     (HFN (SFN (EFN (CDR STR))))
+; 
+; caught STYLE-WARNING:
+;   undefined function: HFN
+
+;     (SFN (EFN (CDR STR)))
+; 
+; caught STYLE-WARNING:
+;   undefined function: SFN
+; 
+; compilation unit finished
+;   Undefined functions:
+;     EFN HFN SFN
+;   caught 3 STYLE-WARNING conditions
+
+; file: /workspaces/csci-330-homeworks-sofhoff/Hwork5/RecursiveDescentParser
+; in: DEFUN EFN
+;     (FFN (GFN STR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: FFN
+
+;     (GFN STR)
+; 
+; caught STYLE-WARNING:
+;   undefined function: GFN
+; 
+; compilation unit finished
+;   Undefined functions:
+;     FFN GFN
+;   caught 2 STYLE-WARNING conditions
+
+; file: /workspaces/csci-330-homeworks-sofhoff/Hwork5/RecursiveDescentParser
+; in: DEFUN SFN
+;     (LFN (CDR STR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: LFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     LFN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-sofhoff/Hwork5/RecursiveDescentParser
+; in: DEFUN LFN
+;     (JFN (CDR STR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: JFN
+; 
+; compilation unit finished
+;   Undefined function:
+;     JFN
+;   caught 1 STYLE-WARNING condition
+
+T
+* (Ifn '(i x o y s))
+
+(IN IFN) 
+(I X O Y S) 
+(IN EFN) 
+(X O Y S) 
+(IN GFN) 
+(X O Y S) 
+(IN GFN) 
+(X O Y S) 
+(IN FFN) 
+(O Y S) 
+(IN GFN) 
+(Y S) 
+(IN FFN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN LFN) 
+(S) 
+(IN JFN) 
+NIL 
+(IN HFN) 
+NIL 
+NIL
+* (Ifn '(i x o y s s))
+
+(IN IFN) 
+(I X O Y S S) 
+(IN EFN) 
+(X O Y S S) 
+(IN GFN) 
+(X O Y S S) 
+(IN GFN) 
+(X O Y S S) 
+(IN FFN) 
+(O Y S S) 
+(IN GFN) 
+(Y S S) 
+(IN FFN) 
+(S S) 
+(IN SFN) 
+(S S) 
+(IN LFN) 
+(S S) 
+(IN JFN) 
+(S) 
+(IN LFN) 
+(S) 
+(IN JFN) 
+NIL 
+(IN HFN) 
+NIL 
+NIL
+* (Ifn '(i w o y o z s))
+
+(IN IFN) 
+(I W O Y O Z S) 
+(IN EFN) 
+(W O Y O Z S) 
+(IN GFN) 
+(W O Y O Z S) 
+(IN GFN) 
+(W O Y O Z S) 
+(IN FFN) 
+(O Y O Z S) 
+(IN GFN) 
+(Y O Z S) 
+(IN FFN) 
+(O Z S) 
+(IN GFN) 
+(Z S) 
+(IN FFN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN LFN) 
+(S) 
+(IN JFN) 
+NIL 
+(IN HFN) 
+NIL 
+NIL
+* (Ifn '(i w o y o z s s))
+
+(IN IFN) 
+(I W O Y O Z S S) 
+(IN EFN) 
+(W O Y O Z S S) 
+(IN GFN) 
+(W O Y O Z S S) 
+(IN GFN) 
+(W O Y O Z S S) 
+(IN FFN) 
+(O Y O Z S S) 
+(IN GFN) 
+(Y O Z S S) 
+(IN FFN) 
+(O Z S S) 
+(IN GFN) 
+(Z S S) 
+(IN FFN) 
+(S S) 
+(IN SFN) 
+(S S) 
+(IN LFN) 
+(S S) 
+(IN JFN) 
+(S) 
+(IN LFN) 
+(S) 
+(IN JFN) 
+NIL 
+(IN HFN) 
+NIL 
+NIL
+* (Ifn '(i y o x o z o w s))
+
+(IN IFN) 
+(I Y O X O Z O W S) 
+(IN EFN) 
+(Y O X O Z O W S) 
+(IN GFN) 
+(Y O X O Z O W S) 
+(IN GFN) 
+(Y O X O Z O W S) 
+(IN FFN) 
+(O X O Z O W S) 
+(IN GFN) 
+(X O Z O W S) 
+(IN FFN) 
+(O Z O W S) 
+(IN GFN) 
+(Z O W S) 
+(IN FFN) 
+(O W S) 
+(IN GFN) 
+(W S) 
+(IN FFN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN LFN) 
+(S) 
+(IN JFN) 
+NIL 
+(IN HFN) 
+NIL 
+NIL
+* (Ifn '(i w s s s e d s s b))
+
+(IN IFN) 
+(I W S S S E D S S B) 
+(IN EFN) 
+(W S S S E D S S B) 
+(IN GFN) 
+(W S S S E D S S B) 
+(IN GFN) 
+(W S S S E D S S B) 
+(IN FFN) 
+(S S S E D S S B) 
+(IN SFN) 
+(S S S E D S S B) 
+(IN LFN) 
+(S S S E D S S B) 
+(IN JFN) 
+(S S E D S S B) 
+(IN LFN) 
+(S S E D S S B) 
+(IN JFN) 
+(S E D S S B) 
+(IN LFN) 
+(S E D S S B) 
+(IN JFN) 
+(E D S S B) 
+(IN HFN) 
+(E D S S B) 
+(IN SFN) 
+(D S S B) 
+(IN LFN) 
+(S S B) 
+(IN JFN) 
+(S B) 
+(IN LFN) 
+(S B) 
+(IN JFN) 
+(B) 
+(IN LFN) 
+(S S B) 
+(IN JFN) 
+(S B) 
+(IN LFN) 
+(S B) 
+(IN JFN) 
+(B) 
+NIL
+* (Ifn '(i x o w d s b e d s b))
+
+(IN IFN) 
+(I X O W D S B E D S B) 
+(IN EFN) 
+(X O W D S B E D S B) 
+(IN GFN) 
+(X O W D S B E D S B) 
+(IN GFN) 
+(X O W D S B E D S B) 
+(IN FFN) 
+(O W D S B E D S B) 
+(IN GFN) 
+(W D S B E D S B) 
+(IN FFN) 
+(D S B E D S B) 
+(IN SFN) 
+(D S B E D S B) 
+(IN LFN) 
+(S B E D S B) 
+(IN JFN) 
+(B E D S B) 
+(IN LFN) 
+(S B E D S B) 
+(IN JFN) 
+(B E D S B) 
+(IN HFN) 
+(E D S B) 
+(IN SFN) 
+(D S B) 
+(IN LFN) 
+(S B) 
+(IN JFN) 
+(B) 
+(IN LFN) 
+(S B) 
+(IN JFN) 
+(B) 
+NIL
+* (Ifn '(i x o s y))
+
+(IN IFN) 
+(I X O S Y) 
+(IN EFN) 
+(X O S Y) 
+(IN GFN) 
+(X O S Y) 
+(IN GFN) 
+(X O S Y) 
+(IN FFN) 
+(O S Y) 
+(IN GFN) 
+(S Y) 
+(IN FFN) 
+(Y ERR) 
+(IN SFN) 
+(Y ERR) 
+(IN LFN) 
+(Y ERR) 
+(IN HFN) 
+(ERR ERR) 
+(ERR ERR)
+* (Ifn '(i s x y o s))
+
+(IN IFN) 
+(I S X Y O S) 
+(IN EFN) 
+(S X Y O S) 
+(IN GFN) 
+(S X Y O S) 
+(IN SFN) 
+(X Y O S ERR) 
+(IN LFN) 
+(X Y O S ERR) 
+(IN HFN) 
+(Y O S ERR ERR) 
+(Y O S ERR ERR)
+* (Ifn '(w o y o z s i))
+
+(IN IFN) 
+(W O Y O Z S I) 
+(O Y O Z S I ERR)
+* (Ifn '(o o y i w z s s))
+
+(IN IFN) 
+(O O Y I W Z S S) 
+(O Y I W Z S S ERR)
+* (Ifn '(i y o x z s o w o))
+
+(IN IFN) 
+(I Y O X Z S O W O) 
+(IN EFN) 
+(Y O X Z S O W O) 
+(IN GFN) 
+(Y O X Z S O W O) 
+(IN GFN) 
+(Y O X Z S O W O) 
+(IN FFN) 
+(O X Z S O W O) 
+(IN GFN) 
+(X Z S O W O) 
+(IN FFN) 
+(Z S O W O) 
+(IN SFN) 
+(Z S O W O) 
+(IN LFN) 
+(Z S O W O) 
+(IN HFN) 
+(S O W O ERR) 
+(S O W O ERR)
+* (Ifn '(i s e s s s s w d b))
+
+(IN IFN) 
+(I S E S S S S W D B) 
+(IN EFN) 
+(S E S S S S W D B) 
+(IN GFN) 
+(S E S S S S W D B) 
+(IN SFN) 
+(E S S S S W D B ERR) 
+(IN LFN) 
+(E S S S S W D B ERR) 
+(IN HFN) 
+(S S S S W D B ERR ERR) 
+(S S S S W D B ERR ERR)
+* (Ifn '(i x b o w s d e b s d))
+
+(IN IFN) 
+(I X B O W S D E B S D) 
+(IN EFN) 
+(X B O W S D E B S D) 
+(IN GFN) 
+(X B O W S D E B S D) 
+(IN GFN) 
+(X B O W S D E B S D) 
+(IN FFN) 
+(B O W S D E B S D) 
+(IN SFN) 
+(B O W S D E B S D) 
+(IN LFN) 
+(B O W S D E B S D) 
+(IN HFN) 
+(O W S D E B S D ERR) 
+(O W S D E B S D ERR)
+* (quit)
+[0;32m@sofhoff [0m➜ [1;34m/workspaces/csci-330-homeworks-sofhoff [0;36m([1;31mmain[0;36m) [0m$ exit
+exit
+
+Script done on 2025-03-18 19:29:25+00:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,72 @@
+;; I ==> iESH  H ==> eS | ɛ  E ==> GF   F ==> oGF | ɛ  G==>w|x|y|z|  S==> L | dLb   L==> sJ   J ==> L | ɛ
+
+(defun Ifn (str)
+  (print '(in Ifn)) (print str)
+  (cond
+    ((and str (eql (car str) 'i)) (Hfn (Sfn (Efn (cdr str)))))
+    (t (append (cdr str) (list 'err)))))
+
+(defun Efn (str)
+  (print '(in Efn)) (print str)
+  (cond
+    ((not (member 'err (Gfn str))) (Ffn (Gfn str)))
+    (t (append (cdr str) (list 'err))))) 
+
+(defun Gfn (str)
+  (print '(in Gfn)) (print str)
+  (cond
+    ((and str (member (car str) '(w x y z))) (cdr str))
+    (t (append (cdr str) (list 'err)))))    
+
+(defun Ffn (str)
+  (print '(in Ffn)) (print str)
+  (cond
+    ((and str (eql (car str) 'o)) (Ffn (Gfn (cdr str))))
+    (t str)))
+
+(defun Sfn (str)
+  (print '(in Sfn)) (print str)
+  (cond
+    ((and str (eql (car str) 'd))
+      (cond
+        ((and (eql (car (Lfn (cdr str))) 'b)) (cdr (Lfn (cdr str))))
+        (t (append (cdr str) (list 'err)))))
+    (t (Lfn str))))
+
+(defun Hfn (str)
+  (print '(in Hfn)) (print str)
+  (cond
+    ((and str (eql (car str) 'e)) (Sfn (cdr str)))
+    ((or (null str) (not (eql (car str) 'e))) str)  
+    (t (append (cdr str) (list 'err)))))
+
+(defun Lfn (str)
+  (print '(in Lfn)) (print str)
+  (cond
+    ((and str (eql (car str) 's)) (Jfn (cdr str)))
+    (t (append (cdr str) (list 'err)))))
+
+(defun Jfn (str)
+  (print '(in Jfn)) (print str)
+  (cond
+    ((and str (eql (car str) 's)) (Lfn str))
+    (t str)))
+
+;;(load "Hwork5/RecursiveDescentParser")
+;;works
+;;(Ifn '(i x o y s))
+;;(Ifn '(i x o y s s))
+;;(Ifn '(i w o y o z s))
+;;(Ifn '(i w o y o z s s))
+;;(Ifn '(i y o x o z o w s))
+;;(Ifn '(i w s s s e d s s b))
+;;(Ifn '(i x o w d s b e d s b))
+
+;;does not work
+;;(Ifn '(i x o s y))
+;;(Ifn '(i s x y o s))
+;;(Ifn '(w o y o z s i))
+;;(Ifn '(o o y i w z s s))
+;;(Ifn '(i y o x z s o w o))
+;;(Ifn '(i s e s s s s w d b))
+;;(Ifn '(i x b o w s d e b s d))
